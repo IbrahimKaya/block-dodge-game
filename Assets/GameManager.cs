@@ -13,6 +13,8 @@ public class GameManager : MonoBehaviour {
 
     IEnumerator RestartLevel()
     {
+        FindObjectOfType<Score>().HingScoreSetter();
+
         Time.timeScale =1f/ slowTime;
         Time.fixedDeltaTime = Time.fixedDeltaTime / slowTime;
 
